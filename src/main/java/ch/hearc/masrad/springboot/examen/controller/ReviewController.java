@@ -34,7 +34,7 @@ public class ReviewController {
         return reviewService.getCountForManufacturer(manufacturer);
     }
     @DeleteMapping(value = "{id}", produces = "application/json")
-    public void deleteById(@PathVariable Long id) {
+    public void deleteId(@PathVariable Long id) {
         reviewService.deleteById((id));
     }
 

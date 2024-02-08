@@ -16,7 +16,7 @@ public class PhoneUpdateDto {
     private String model;
 
 
-    public Phone toEntity(Phone phone) {
+    public Phone toEntity() {
         return new Phone(manufacturer, model);
     }
 
