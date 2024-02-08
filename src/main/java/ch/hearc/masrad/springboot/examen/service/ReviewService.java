@@ -46,4 +46,8 @@ public class ReviewService {
         return reviewRepository.getCountByPhoneManufacturer(manufacturer);
     }
 
+    public void deleteById (Long id) {
+        reviewRepository.deleteById(id);
+    }
+
 }

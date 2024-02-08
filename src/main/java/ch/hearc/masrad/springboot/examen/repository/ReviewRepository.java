@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ReviewRepository extends JpaRepository<Review, Long> {
 
-    @Query("select count(review) from Review review where review.phone.manufacturer = :manufacturer")
+    @Query(value = "select count(review) from Review review where review.phone.manufacturer = :manufacturer")
     Integer getCountByPhoneManufacturer(@Param("manufacturer") String manufacturer);
 
 }

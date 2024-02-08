@@ -2,6 +2,7 @@ package ch.hearc.masrad.springboot.examen.controller;
 
 import ch.hearc.masrad.springboot.examen.dto.ReviewCreationDto;
 import ch.hearc.masrad.springboot.examen.dto.ReviewResponseDto;
+import ch.hearc.masrad.springboot.examen.entity.Review;
 import ch.hearc.masrad.springboot.examen.service.ReviewService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -31,6 +32,10 @@ public class ReviewController {
     @GetMapping(value = "", produces = "application/json")
     public Integer getCountForManufacturer(@RequestParam String manufacturer) {
         return reviewService.getCountForManufacturer(manufacturer);
+    }
+    @DeleteMapping(value = "{id}", produces = "application/json")
+    public void deleteById(@PathVariable Long id) {
+        reviewService.deleteById((id));
     }
 
 }
